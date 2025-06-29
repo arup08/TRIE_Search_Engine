@@ -1,4 +1,5 @@
 #include <bits/stdc++.h>
+#include "utils.h"
 using namespace std;
 
 vector<string> get_array_from_file(string src)
@@ -50,7 +51,7 @@ vector<string> linear_search_pre(vector<string> v, string str)
     auto stop = chrono::high_resolution_clock::now();
     auto duration = chrono::duration_cast<chrono::nanoseconds>(stop - start);
 
-    cerr << "\033[32m\n"
+    cout << "\033[32m\n"
          << results.size() << " results in " << double(duration.count() / double(1000000)) << " ms.\033[0m\n\n";
 
     return results;
@@ -73,7 +74,7 @@ bool linear_search_exact(vector<string> v, string str)
     auto stop = chrono::high_resolution_clock::now();
     auto duration = chrono::duration_cast<chrono::nanoseconds>(stop - start);
 
-    cerr << "\033[32m\n"
+    cout << "\033[32m\n"
          << found << " results in " << double(duration.count() / double(1000000)) << " ms.\033[0m\n\n";
 
     return false;
@@ -184,7 +185,7 @@ vector<string> search(vector<string> v, string pat)
     auto stop = chrono::high_resolution_clock::now();
     auto duration = chrono::duration_cast<chrono::nanoseconds>(stop - start);
 
-    cerr << "\033[32m\n"
+    cout << "\033[32m\n"
          << results.size() << " results in " << double(duration.count() / double(1000000)) << " ms.\033[0m\n\n";
 
     return results;
